@@ -1,0 +1,575 @@
+@font-face {
+    font-family: Futura;
+    src: url(./Futura-Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: black;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #F7F7F7;
+}
+
+#main {
+    padding: 0 1.3vw;
+}
+
+#cursor {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.393);
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+#nav {
+    width: 100%;
+    padding: 25px;
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#nav-pt1 {
+    height: 82px;
+    overflow: hidden;
+}
+
+
+#nav-pt1 svg {
+    display: block;
+}
+
+#nav-pt2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#nav-pt2 #links a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: gilroy;
+    font-weight: 300;
+    margin-right: 50px;
+}
+
+#icons {
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #F7F7F7;
+}
+
+#nav-pt2 #icons i {
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: 100;
+}
+#menu{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    transform:translateY(-100%);
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    padding: 2vw;
+
+}
+#menu h1{
+    color: #F5DFCF;
+    font-family: "Futura";
+    font-size: 3vw;
+    font-weight: 900;
+}
+
+#page1 {
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 14.4vw;
+}
+
+#page1 h1 {
+    font-size: 15.1vw;
+    font-weight: 900;
+    font-family: "Futura";
+    line-height: 0.9;
+}
+
+#video-container {
+    height: 100vh;
+    width: 100%;
+    margin-top: 1vw;
+    position: relative;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+}
+
+#video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video-container #play {
+    padding: 3vw 2.2vw;
+    background-color: black;
+    color: #fff;
+    font-size: 1.3vw;
+    position: fixed;
+    text-transform: uppercase;
+    font-family: "Futura";
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5vw 0;
+}
+
+#page2 .elem {
+    height: 100%;
+    width: 32.5%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#page2 .elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#page2 .elem .box {
+    height: 50px;
+    width: 60%;
+    background-color: #F5DFCF;
+    position: absolute;
+    border-radius: 50px;
+}
+
+#page3 {
+    min-height: 130vh;
+    width: 100%;
+    padding: 5vw 0;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#page3 h2 {
+    font-size: 3.5vw;
+    font-family: "Futura";
+    line-height: 1;
+}
+
+#page3 h4 {
+    font-size: 1.1vw;
+    font-family: "gilroy";
+    line-height: 1.5;
+    font-weight: 500;
+    margin-right: 155px;
+}
+
+#page3 .child {
+    height: 70vh;
+    width: 48%;
+    margin-bottom: 2vw;
+}
+
+#page3 .child img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#page4 {
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2vw;
+}
+
+#page4 .text {
+    width: 100%;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#page4 .text h4 {
+    font-size: 13px;
+    font-family: gilroy;
+    font-weight: 500;
+}
+
+#page4 h1 {
+    width: 80%;
+    font-size: 4.5vw;
+    font-weight: 900;
+    font-family: "Futura";
+    line-height: 0.9;
+    margin: 3vw auto;
+}
+
+#page4 button {
+    background-color: black;
+    color: white;
+    padding: 25px 80px;
+    border: none;
+    border-radius: 50px;
+    font-family: gilroy;
+    font-weight: 500;
+    margin-top: 1vw;
+}
+
+#page4 h4 {
+    font-size: 1.1vw;
+    margin-top: 2vw;
+    font-family: gilroy;
+    font-weight: 500;
+    width: 20%;
+    margin: 1.5vw auto;
+}
+
+#page5 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5vw 0;
+}
+
+#page5 .elem {
+    height: 100%;
+    width: 32.5%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#page5 .elem:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#page5 .elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#page5 #pg5-text h3 {
+    font-size: 1.5vw;
+    font-family: "Futura";
+    margin-bottom: 2vw;
+}
+
+#page5 #pg5-text p {
+    font-size: 1.1vw;
+    font-family: gilroy;
+    line-height: 1.5;
+    width: 70%;
+}
+
+#page6{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+#page6 img{
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height:250px;
+}
+#page6 #row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    margin-top: 4vw;
+}
+
+#page6 #row h1{
+    font-size: 3vw;
+    font-family: gilroy;
+    font-weight: 800;
+}
+#page6 #row i{
+    font-size: 2vw;
+}
+#page6 #footer{
+    width: 100%;
+    height: 50vh;
+    margin-top: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#foot-left{
+    width: 30%;
+    height: 100%;
+}
+#foot-right{
+    width: 30%;
+    height: 100%;
+    text-align: right;
+}
+#footer h3{
+    font-family: gilroy;
+    font-size: 1vw;
+    font-weight: 500;
+    margin-bottom: 1vw;
+    color: rgba(0, 0, 0, 0.466);
+    margin-top: 6vw;
+}
+#footer h4{
+    font-family: gilroy;
+    font-size: 0.9vw;
+    font-weight: 500;
+    line-height: 1.5;
+}
+#page6 P{
+    font-family:gilroy;
+    text-align: center;
+    width: 68%;
+    margin: 0 auto;
+    font-size: 14px;
+}
+/* ------------- RESPONSIVE CODE ------------------- */
+
+@media (max-width:600px) {
+    #nav-pt1 {
+        height: 57px;
+    }
+
+    #nav-pt1 svg {
+        height: 50px;
+        margin-bottom: 13px;
+    }
+    #nav-pt2 #icons{
+        background-color: black;
+    }
+    #nav-pt2 #icons i {
+        color: white;
+    }
+
+    #links a {
+        display: none;
+    }
+    #menu{
+        padding: 5vw;
+    }
+    #menu h1{
+        color: #F5DFCF;
+        font-family: "Futura";
+        font-size: 11vw;
+        font-weight: 900;
+    }
+
+    #page1 {
+        min-height: 70vh;
+        padding: 0 4vw;
+        padding-top: 25vh;
+    }
+
+    #page1 h1 {
+        font-size: 14.5vw;
+    }
+
+    #video-container {
+        height: 25vh;
+        margin-top: 2.5vw;
+    }
+
+    #video-container #play {
+        padding: 8vw 5.4vw;
+        font-size: 6vw;
+        opacity: 1;
+        scale: 1;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #page2 {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 3.5vw;
+    }
+
+    #page2 .elem {
+        height: 100%;
+        width: 100%;
+        margin-bottom: 3vw;
+    }
+
+    #page2 .elem .box {
+        height: 35px;
+        width: 65%;
+    }
+
+    #page3 {
+        min-height: 130vh;
+    }
+
+    #page3 .child {
+        height: 30vh;
+    }
+
+    #page3 h2 {
+        font-size: 6.5vw;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #page3 h4 {
+        font-size: 4.1vw;
+        margin: 2vw auto;
+    }
+
+    #page4 {
+        min-height: 60vh;
+    }
+
+    #page4 .text h4 {
+        font-size: 9px;
+    }
+
+    #page4 h1 {
+        width: 75%;
+        font-size: 6vw;
+        line-height: 1;
+        margin: 10vh auto;
+    }
+
+    #page4 button {
+        padding: 20px 75px;
+        margin-bottom: 3vh;
+    }
+
+    #page4 h4 {
+        font-size: 4.6vw;
+        font-family: gilroy;
+        font-weight: 500;
+        width: 85%;
+        margin: 1.5vw auto;
+    }
+
+    #page5 {
+        flex-wrap: wrap;
+        padding: 0 3vw;
+    }
+
+    #page5 .elem {
+        height: 100%;
+        width: 32.5%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    #page5 .elem:nth-child(1) {
+        width: 100%;
+        height: 60%;
+    }
+
+    #page5 .elem:nth-child(2) {
+        width: 49%;
+        height: 25%;
+    }
+
+    #page5 .elem:nth-child(3) {
+        width: 49%;
+        height: 25%;
+    }
+
+    #page5 #pg5-text h3 {
+        font-size: 3.5vh;
+        margin-bottom: 3vw;
+    }
+
+    #page5 #pg5-text p {
+        font-size: 5.1vw;
+        width: 92%;
+    }
+    #page6 img{
+        top: 15%;
+        left: 11%;
+        height:80px;
+    }
+    #page6 #footer{
+        margin-top: 12vh;
+        padding: 0 1.5vw;
+    }
+    #foot-left{
+        width: 50%;
+        height: 50%;
+    }
+    #foot-right{
+        width: 50%;
+        height: 50%;
+        text-align: left;
+    }
+    #footer h3{
+        font-size: 3vw;
+        margin-bottom: 3vw;
+    }
+    #footer h4{
+        font-size: 3.5vw;
+    }
+    #page6 P{
+        text-align: left;
+        width: 100%;
+        padding: 0 1vw;
+    }
+}
